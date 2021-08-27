@@ -1,18 +1,20 @@
-import SocialProfile from './components/social-profile/SocialProfile';
+import { Wrapper } from './components/Wrapper/Wrapper';
+import { SocialProfile } from './components/SocialProfile/SocialProfile';
 import userData from './user.json';
+import { Statistics } from './components/Statistics/Statistics';
+import statisticalData from './statistical-data.json';
 
-function App() {
+export function App() {
   return (
-    <SocialProfile
-      name={userData.name}
-      tag={userData.tag}
-      location={userData.location}
-      avatar={userData.avatar}
-      followers={userData.stats.followers}
-      views={userData.stats.views}
-      likes={userData.stats.likes}
-    />
+    <Wrapper>
+      <SocialProfile
+        name={userData.name}
+        tag={userData.tag}
+        location={userData.location}
+        avatar={userData.avatar}
+        stats={userData.stats}
+      />
+      <Statistics title="Upload stats" stats={statisticalData} />
+    </Wrapper>
   );
 }
-
-export default App;
