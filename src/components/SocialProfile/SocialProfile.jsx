@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
-import style from './SocialProfile.module.css';
+import {
+  Card,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  StatsItem,
+  Label,
+  Quantity,
+} from './SocialProfile.styled';
 
 export function SocialProfile({
   name,
@@ -9,29 +20,29 @@ export function SocialProfile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className={style.profile}>
-      <div className={style.description}>
-        <img src={avatar} alt={name} className={style.avatar} />
-        <p className={style.name}>{name}</p>
-        <p className={style.tag}>@{tag}</p>
-        <p className={style.location}>{location}</p>
-      </div>
+    <Card>
+      <Description>
+        <Avatar src={avatar} alt={name} />
+        <Name>{name}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={style.stats}>
-        <li className={style.statsItem}>
-          <span className={style.label}>Followers</span>
-          <span className={style.quantity}>{followers}</span>
-        </li>
-        <li className={style.statsItem}>
-          <span className={style.label}>Views</span>
-          <span className={style.quantity}>{views}</span>
-        </li>
-        <li className={style.statsItem}>
-          <span className={style.label}>Likes</span>
-          <span className={style.quantity}>{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsItem>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </StatsItem>
+      </Stats>
+    </Card>
   );
 }
 

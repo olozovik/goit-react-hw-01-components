@@ -1,5 +1,5 @@
-import style from './Wrapper.module.css';
+import { Container } from './Wrapper.styled';
 
 export function Wrapper({ children }) {
-  return <div className={style.wrapper}>{children}</div>;
+  return <Container>{children}</Container>;
 }
