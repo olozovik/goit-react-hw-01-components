@@ -9,12 +9,7 @@ function FriendList({ friends }) {
         const { name, avatar, isOnline, id } = item;
         return (
           <Card key={id}>
-            <FriendListItem
-              name={name}
-              avatar={avatar}
-              status={isOnline}
-              id={id}
-            />
+            <FriendListItem name={name} avatar={avatar} status={isOnline} />
           </Card>
         );
       })}
