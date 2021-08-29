@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 const Section = styled.section`
-  order: 2;
   font-family: ${props => props.theme.font};
 `;
 

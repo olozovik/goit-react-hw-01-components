@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 const List = styled.ul`
-  order: 2;
   display: flex;
   flex-direction: column;
   gap: 14px;

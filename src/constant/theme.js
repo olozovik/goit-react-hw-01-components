@@ -9,4 +9,6 @@ export const theme = {
   wrapperBgColor: '#e7ecf2',
   borderColor: '#e4e9f0',
   boxShadowColor: 'rgba(128, 128, 128, 0.2)',
+  tableHeadBgColor: '#00BCD5',
+  tableSecondaryBgColor: '#ECF1F4',
 };

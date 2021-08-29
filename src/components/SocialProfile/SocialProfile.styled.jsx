@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 const Card = styled.div`
-  order: 2;
   width: 250px;
   border-radius: 5px;
   overflow: hidden;
