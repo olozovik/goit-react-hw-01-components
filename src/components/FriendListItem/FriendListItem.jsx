@@ -5,8 +5,8 @@ function FriendListItem({ name, avatar, status }) {
   return (
     <>
       <Status status={status} />
-      <Avatar className="avatar" src={avatar} alt={name} width="48" />
-      <Name className="name">{name}</Name>
+      <Avatar src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
     </>
   );
 }
